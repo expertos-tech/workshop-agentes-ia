@@ -5,7 +5,7 @@ paginate: true
 style: |
   .reference {
     position: absolute;
-    bottom: 50px;
+    bottom: 60px;
     right: 50px;
     font-size: 0.55em;
     color: #888;
@@ -14,15 +14,21 @@ style: |
   }
 
   .columns {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
     gap: 40px;
     align-items: center;
   }
 
-  .columns img {
-    width: 100%;
-    border-radius: 8px;
+  .col-text {
+    flex: 1;
+  }
+
+  .col-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    padding: 0 0 50px;
   }
 
   pre {
@@ -146,9 +152,9 @@ Código previsível, controlado e com decisão técnica ainda na mão de quem de
 
 # O "Efeito Dumbledore" na IA
 
-<div class="columns" style="grid-template-columns: 3fr 2fr;">
+<div class="columns">
 
-<div>
+<div class="col-text">
 
 > "Como já provei a você também, erro como qualquer outro homem. De fato, sendo, perdoe-me, bem mais inteligente que a maioria, os meus erros tendem a ser proporcionalmente maiores."
 
@@ -158,14 +164,15 @@ Código previsível, controlado e com decisão técnica ainda na mão de quem de
 
 <div class="reference">
   <b>Referência Bibliográfica:</b><br>
-  ROWLING, J. K. <i>Harry Potter e o Enigma do Príncipe.</i><br>
-  Tradução de Lia Wyler, Capítulo 10 — "A Casa de Gaunt"
+  Rowlling, J. K. <br>
+  <i>Harry Potter e o Enigma do Príncipe.</i><br>
+  Capítulo 10 — "A Casa de Gaunt"
 </div>
 
 </div>
 
-<div style="display:flex; align-items:center; justify-content:center;">
-  <img src="images/dumbledore.png" style="width:100%; max-height:420px; object-fit:contain; border-radius:8px;" />
+<div class="col-image">
+  <img src="images/dumbledore.png" width="300" />
 </div>
 
 </div>
@@ -196,12 +203,26 @@ Na prática, quanto maior o repositório e mais complexo o sistema, maior tende 
 
 ---
 
-# "Pra quem só tem martelo, tudo é prego"
+
+
+<div class="columns">
+
+<div class="col-text">
+  <h1><i>"Pra quem só tem martelo, tudo é prego"</i></h1>
+</div>
+
+<div class="col-image">
+  <img src="images/martelo.png" width="600" />
+</div>
 
 <div class="reference">
   <b>Referência:</b><br>
   <i>Ditado popular</i><br>
 </div>
+
+</div>
+
+
 
 ---
 
