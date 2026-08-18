@@ -17,6 +17,12 @@ style: |
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
+    align-items: center;
+  }
+
+  .columns img {
+    width: 100%;
+    border-radius: 8px;
   }
 
   pre {
@@ -140,6 +146,10 @@ Código previsível, controlado e com decisão técnica ainda na mão de quem de
 
 # O "Efeito Dumbledore" na IA
 
+<div class="columns" style="grid-template-columns: 3fr 2fr;">
+
+<div>
+
 > "Como já provei a você também, erro como qualquer outro homem. De fato, sendo, perdoe-me, bem mais inteligente que a maioria, os meus erros tendem a ser proporcionalmente maiores."
 
 - Modelos de IA possuem capacidade massiva de geração e abstração de código.
@@ -149,7 +159,15 @@ Código previsível, controlado e com decisão técnica ainda na mão de quem de
 <div class="reference">
   <b>Referência Bibliográfica:</b><br>
   ROWLING, J. K. <i>Harry Potter e o Enigma do Príncipe.</i><br>
-  Tradução de Lia Wyler, Capítulo 10 — “A Casa de Gaunt”
+  Tradução de Lia Wyler, Capítulo 10 — "A Casa de Gaunt"
+</div>
+
+</div>
+
+<div style="display:flex; align-items:center; justify-content:center;">
+  <img src="images/dumbledore.png" style="width:100%; max-height:420px; object-fit:contain; border-radius:8px;" />
+</div>
+
 </div>
 
 ---
