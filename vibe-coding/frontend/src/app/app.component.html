@@ -1,0 +1,46 @@
+<div class="container">
+  <h1>🍫 OpenFoodSearch</h1>
+
+  <div class="controls">
+    <div class="search-bar">
+      <input
+        type="text"
+        [(ngModel)]="searchTerm"
+        placeholder="Buscar produto..."
+        (keyup.enter)="loadProducts()"
+      />
+      <button (click)="loadProducts()">Buscar</button>
+    </div>
+
+    <div class="etl-bar">
+      <input type="text" [(ngModel)]="fetchQuery" placeholder="Termos para ETL (ex: chocolate)" />
+      <button class="btn-etl" (click)="triggerEtl()">Importar da API</button>
+    </div>
+  </div>
+
+  <p class="message" *ngIf="message">{{ message }}</p>
+  <p class="loading" *ngIf="loading">Carregando...</p>
+
+  <table *ngIf="!loading && products.length > 0">
+    <thead>
+      <tr>
+        <th>Código</th>
+        <th>Nome do Produto</th>
+        <th>Marcas</th>
+        <th>Categorias</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of products">
+        <td>{{ p.code }}</td>
+        <td>{{ p.productName }}</td>
+        <td>{{ p.brands || '-' }}</td>
+        <td>{{ p.categories || '-' }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p *ngIf="!loading && products.length === 0" class="empty">
+    Nenhum produto encontrado. Use o botão "Importar da API" para buscar dados.
+  </p>
+</div>
