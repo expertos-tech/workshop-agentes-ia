@@ -59,9 +59,15 @@ style: |
 
 # Estrutura do Repositório
 
-- `/how-to/`: Apresentação e roteiros de execução.
-- `/service-api/`: Backend .NET e workers de ETL.
-- `/frontend/`: Aplicação web para consumo da API.
+```text
+workshop-agentes-ia/
+├── how-to/
+│   └── images/
+├── vibe-coding/
+│   ├── Backend/
+│   └── frontend/
+└── agentic-engineering/
+```
 
 ---
 
