@@ -28,6 +28,10 @@ style: |
     white-space: pre-wrap;
   }
 
+  .github {
+    text-align: center;
+  }
+
 ---
 
 # Workshop: Agentes de IA para Programação
@@ -273,3 +277,103 @@ Passa a ser entender o que a IA fez.
 
 **Resultado:**  
 O agente validou partes isoladas e concluiu que o sistema inteiro estava pronto.
+
+---
+
+# Erros Bizarros — Parte 1
+
+* **Erro virou sucesso:** Falha no ETL → `200 OK`.
+* **God Service:** HTTP + ETL + banco + logs na mesma classe.
+* **N+1 no banco:** Consulta por produto antes de salvar.
+* **Credenciais no código:** `appsettings` + fallback no `Program.cs`.
+* **Zero resiliência:** API externa sem retry/backoff.
+
+---
+
+# Erros Bizarros — Parte 2
+
+* **Angular 17 em 2026:** Projeto já nasce defasado.
+* **`localhost` hardcoded:** Configuração presa no código.
+* **Entidade = contrato:** EF exposto direto para o frontend.
+* **`AppComponent` faz tudo:** Busca, estado, ETL e mensagens.
+* **Zero i18n:** Textos todos hardcoded.
+
+---
+
+# Então a IA não sabe fazer?
+
+* **Conhecimento genérico:** Sem direção explícita, o modelo tende a recorrer ao seu conhecimento genérico e ao contexto disponível.
+* **Qualidade de "Trabalho de Faculdade":** O código atende ao requisito imediato e básico, mas ignora padrões de engenharia corporativa.
+* **A Ponta do Iceberg:** Os erros listados anteriormente representam apenas os sintomas superficiais de falhas arquiteturais mais profundas.
+* **"Estar Funcionando" vs. Ser Funcional:** Compilar e rodar não garante escalabilidade, segurança ou manutenibilidade.
+* **Causa Raiz:** A falta de direcionamento, contexto e restrições.
+
+---
+
+# Mantenha a sua Empregabilidade
+
+* **O Risco da Dependência:** Delegar decisões críticas à IA cria lacunas severas no seu conhecimento técnico.
+* **O Cenário da Entrevista:** Como você justificará suas decisões em uma avaliação? A resposta não pode ser: *"Eu sei fazer, mas preciso abrir o meu agente CLI"*.
+* **O Papel da Ferramenta:** Agentes são multiplicadores de produtividade e velocidade, não substitutos do seu conhecimento.
+
+---
+
+# Tenha sempre em mente
+
+**A Regra de Ouro:**  
+Ao finalizar qualquer entrega, faça a si mesmo a pergunta definitiva:  
+*"Eu consigo explicar, defender, corrigir e suportar o que a IA acabou de fazer?"*  
+
+**Você ainda é um programador:**  
+Usar um acelerador não pode transformar você em um especificador funcional de prompts preso em loopings de tentativa e erro.
+
+---
+
+# Próxima Sessão: Fazendo do Jeito Certo
+
+* **Definir o produto:** O que estamos construindo, para quem, quais regras, limites e critérios de sucesso.
+* **Definir a persona:** Backend, frontend, Kubernetes e cloud exigem conhecimentos diferentes. Cada contexto deve ter o especialista certo.
+* **Criar o `AGENT.md`:** Instruções, padrões, restrições e diretrizes de cada subprojeto, alinhados à sua respectiva persona.
+* **Skills, Plugins e MCP:** Como ampliar as capacidades do agente e fornecer ferramentas, contexto e integrações de forma controlada.
+
+
+---
+
+## continuando...
+
+* **Documentation-first:** Arquitetura, contratos, dados, integrações e decisões documentados antes da primeira linha de código.
+* **Engenharia antes da geração:** Guardrails, parametrização externa, arquitetura, responsabilidades, Design Patterns e Orientação a Objetos.
+* **Testes Unitários:** Como estruturar, validar e usar a IA sem cair no “teste que só testa o mock”.
+* **Testes Integrados e de Carga:** Onde a capacidade de geração e análise das LLMs começa a virar uma vantagem enorme.
+
+
+Agora não vamos pedir para a IA construir o sistema.  
+Vamos preparar o sistema para que a IA consiga construí-lo direito.
+
+---
+
+# Github do Workshop
+
+<div class="github">
+
+![width:400px](images/github.png)
+
+[github.com/expertos-tech/workshop-agentes-ia](https://github.com/expertos-tech/workshop-agentes-ia)
+
+</div>
+
+---
+# Cereja do bolo
+
+**Não acredite em mim. Teste você mesmo.**
+
+Essa apresentação foi 100% construída com apoio de IA.
+
+Mas e se, em vez de toda essa discussão, revisão e direcionamento, eu simplesmente entregar os tópicos para uma IA e pedir:
+
+> **"Crie meu workshop."**
+
+Use exatamente o mesmo prompt no ChatGPT, Gemini, Claude, Copilot ou qualquer outra LLM e compare o resultado.
+
+No repositório do GitHub, o prompt está em:  
+`how-to/crie-meu-workshop.md`
